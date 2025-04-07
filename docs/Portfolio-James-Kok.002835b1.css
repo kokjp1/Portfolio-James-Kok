@@ -295,7 +295,7 @@
     resize: both;
   }
 
-  .border, .border-1 {
+  .border-1 {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
@@ -388,4 +388,4 @@
   inherits: false;
   initial-value: solid;
 }
-/*# sourceMappingURL=Portfolio-James-Kok.1049b834.css.map */
+/*# sourceMappingURL=Portfolio-James-Kok.002835b1.css.map */
