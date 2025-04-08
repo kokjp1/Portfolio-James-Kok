@@ -6,7 +6,7 @@
     "build:css": "tailwindcss -i ./src/styling/input.css -o ./docs/styling/output.css --minify",
     "build": "npm run build:css && parcel build src/index.html src/projects.html --dist-dir docs --public-url ./ --no-content-hash",
     "dev:css": "tailwindcss -i ./src/styling/input.css -o ./docs/styling/output.css --watch",
-    "start": "concurrently \"npm run dev:css\" \"parcel src/index.html --dist-dir docs --open\""
+    "start": "concurrently \"npm run dev:css\" \"parcel serve src/index.html --dist-dir ./docs --public-url /\""  
   },
   "repository": {
     "type": "git",
