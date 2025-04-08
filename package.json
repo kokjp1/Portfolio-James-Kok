@@ -5,8 +5,8 @@
   "scripts": {
     "build:css": "tailwindcss -i ./src/styling/input.css -o ./docs/styling/output.css --minify",
     "build": "npm run build:css && parcel build src/index.html --dist-dir docs --no-content-hash",
-    "dev:css": "tailwindcss -i ./src/styling/input.css -o ./src/styling/output.css --watch",
-    "start": "concurrently \"npm run dev:css\" \"parcel src/index.html --open\""
+    "dev:css": "tailwindcss -i ./src/styling/input.css -o ./docs/styling/output.css --watch",
+    "start": "concurrently \"npm run dev:css\" \"parcel src/index.html --dist-dir docs --open\""
   },
   "repository": {
     "type": "git",
