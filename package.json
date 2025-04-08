@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Portfolio van James Kok",
   "scripts": {
-  "build:css": "tailwindcss -i ./src/styling/input.css -o ./docs/styling/output.css --minify",
-  "build": "npm run build:css && parcel build src/index.html --dist-dir docs"
+    "build:css": "tailwindcss -i ./src/styling/input.css -o ./docs/styling/output.css --minify",
+    "build": "npm run build:css && parcel build src/index.html --dist-dir docs --no-content-hash",
+    "dev:css": "tailwindcss -i ./src/styling/input.css -o ./src/styling/output.css --watch",
+    "start": "concurrently \"npm run dev:css\" \"parcel src/index.html --open\""
   },
   "repository": {
     "type": "git",
