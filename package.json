@@ -2,11 +2,10 @@
   "name": "portfoliojameskok",
   "version": "1.0.0",
   "description": "Portfolio van James Kok",
-"scripts": {
-  "dev": "concurrently \"tsc --watch\" \"tailwindcss -i ./src/styling/input.css -o ./src/styling/tailwindOutput.css --watch\" \"live-server ./src\"",
-  "build": "tailwindcss -i ./src/styling/input.css -o ./src/styling/tailwindOutput.css --minify"
-},
-
+  "scripts": {
+    "dev": "concurrently \"tsc --watch\" \"tailwindcss -i ./dist/styling/input.css -o ./dist/styling/tailwindOutput.css --watch\" \"live-server ./dist\"",
+    "build": "tsc && tailwindcss -i ./dist/styling/input.css -o ./dist/styling/tailwindOutput.css --minify"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kokjp1/Portfolio-James-Kok.git"
