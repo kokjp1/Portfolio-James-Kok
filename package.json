@@ -2,12 +2,10 @@
   "name": "portfoliojameskok",
   "version": "1.0.0",
   "description": "Portfolio van James Kok",
-  "scripts": {
-    "build:css": "tailwindcss -i ./src/styling/input.css -o ./docs/styling/output.css --minify",
-    "build": "npm run build:css && parcel build src/index.html src/projects.html --dist-dir docs --public-url ./ --no-content-hash",
-    "dev:css": "tailwindcss -i ./src/styling/input.css -o ./docs/styling/output.css --watch",
-    "start": "concurrently \"npm run dev:css\" \"parcel serve src/index.html --dist-dir ./docs --public-url /\""  
-  },
+    "scripts": {
+      "dev": "echo 'Starting dev server and watching CSS changes...' && concurrently \"tailwindcss -i ./src/styling/input.css -o ./src/styling/tailwindOutput.css --watch\" \"live-server ./src\"",
+      "build": "tailwindcss -i ./src/styling/input.css -o ./src/styling/tailwindOutput.css --minify"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kokjp1/Portfolio-James-Kok.git"
@@ -20,10 +18,10 @@
   "homepage": "https://github.com/kokjp1/Portfolio-James-Kok#readme",
   "devDependencies": {
     "concurrently": "^9.1.2",
-    "parcel": "^2.14.4"
+    "daisyui": "^5.0.18",
+    "tailwindcss": "^4.1.3"
   },
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.3",
-    "tailwindcss": "^4.1.3"
+    "@tailwindcss/cli": "^4.1.3"
   }
 }
