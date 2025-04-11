@@ -479,6 +479,9 @@
       outline: 2px solid currentColor;
     }
   }
+  .relative {
+    position: relative;
+  }
   .textarea {
     border: var(--border) solid #0000;
     min-height: calc(0.25rem * 20);
