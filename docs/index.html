@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="light" lang="en">
+<html data-theme="silk" lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -10,20 +10,25 @@
 </head>
 
 <body>
-  <!-- Navigation Bar -->
-  <nav class="bg-primary text-primary-content">
-    <div class="container mx-auto flex justify-between items-center p-4">
-      <a href="#" class="text-2xl font-bold">Your Name</a>
-      <ul class="flex space-x-4">
-        <li><a href="#about" class="btn btn-ghost">About</a></li>
-        <li><a href="#projects" class="btn btn-ghost">Projects</a></li>
-        <li><a href="#contact" class="btn btn-ghost">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+<canvas id="bg-canvas" class="fixed inset-0 z-[-10] pointer-events-none"></canvas>
+<div class="drawer z-10">
+  <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content">
+    <!-- Page content here -->
+    <label for="my-drawer" class="btn btn-primary drawer-button">Open drawer</label>
+  </div>
+  <div class="drawer-side">
+    <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+    <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+      <!-- Sidebar content here -->
+      <li><a>Sidebar Item 1</a></li>
+      <li><a>Sidebar Item 2</a></li>
+    </ul>
+  </div>
+</div>
 
   <!-- Hero Section -->
-  <header class="hero bg-base-200 text-center py-16 flex items-center justify-center min-h-[50vh]">
+  <header class="hero text-center py-16 flex items-center justify-center min-h-[50vh]">
     <div class="text-center">
       <h1 class="text-4xl font-bold mb-4">
         <span class="inline-block" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-delay="0">Hello,</span>
@@ -65,7 +70,7 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="bg-base-200 py-16">
+  <section id="projects" class="py-16">
     <div class="container mx-auto px-18 text-center">
       <div class="flex flex-row justify-between">
       <h2 class="text-3xl font-semibold">My Projects</h2>
@@ -150,6 +155,7 @@
   </footer>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="compiled/scroll.js"> </script>
+  <script src="compiled/background.js" type="module"></script>
   <script>
     AOS.init();
   </script>
