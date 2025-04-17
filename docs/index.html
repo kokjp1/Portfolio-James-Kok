@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="silk" lang="en">
+<html data-theme="dim" lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -9,24 +9,28 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body>
-<canvas id="bg-canvas" class="fixed inset-0 z-[-10] pointer-events-none"></canvas>
-<div id="background-sphere" class="fixed rounded-full bg-primary/20 blur-6xl pointer-events-none z-[-10]"></div>
-<div class="drawer z-10">
-  <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-  <div class="drawer-content">
-    <!-- Page content here -->
-    <label for="my-drawer" class="btn btn-primary drawer-button">Open drawer</label>
-  </div>
-  <div class="drawer-side">
-    <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-    <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
-      <!-- Sidebar content here -->
-      <li><a>Sidebar Item 1</a></li>
-      <li><a>Sidebar Item 2</a></li>
-    </ul>
-  </div>
+<body class="overflow-x-hidden">
+<canvas id="bg-canvas" class=" fixed inset-0 z-[-10] pointer-events-none"></canvas>
 </div>
+
+<svg id="background-sphere"   class="fixed rounded-full pointer-events-none z-[-10] hidden lg:block text-primary" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 595.28 595.28">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#radial-gradient);
+      }
+    </style>
+    <radialGradient id="radial-gradient" cx="297.64" cy="297.64" fx="297.64" fy="297.64" r="297.64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="currentColor" stop-opacity=".5"/>
+      <stop offset=".46" stop-color="currentColor" stop-opacity=".24"/>
+      <stop offset=".82" stop-color="currentColor" stop-opacity=".07"/>
+      <stop offset="1" stop-color="currentColor" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer_1">
+    <rect class="cls-1" width="1595.28" height="1595.28"/>
+  </g>
+</svg>
 
   <!-- Hero Section -->
   <header class="hero text-center py-16 flex items-center justify-center min-h-[50vh]">
@@ -54,19 +58,19 @@
   <section class="max-w-screen-2xl mx-auto px-18 py-8">
     <h2 class="text-2xl font-semibold mb-4">Tools I Use</h2>
     <ul class="flex flex-wrap gap-3">
-      <li data-aos="zoom-out" data-aos-delay="0" class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm shadow-sm">After Effects</li>
-      <li data-aos="zoom-out" data-aos-delay="50" class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm shadow-sm">Premier Pro</li>
-      <li data-aos="zoom-out" data-aos-delay="100" class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm shadow-sm">Photoshop</li>
-      <li data-aos="zoom-out" data-aos-delay="150" class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm shadow-sm">Illustrator</li>
-      <li data-aos="zoom-out" data-aos-delay="200" class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm shadow-sm">Visual Studio Code</li>
-      <li data-aos="zoom-out" data-aos-delay="250" class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm shadow-sm">Procreate</li>
-      <li data-aos="zoom-out" data-aos-delay="300" class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm shadow-sm">Github</li>
-      <li data-aos="zoom-out" data-aos-delay="350" class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm shadow-sm">Figma</li>
-      <li data-aos="zoom-out" data-aos-delay="400" class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm shadow-sm">Figjam</li>
-      <li data-aos="zoom-out" data-aos-delay="450" class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm shadow-sm">Miro</li>
-      <li data-aos="zoom-out" data-aos-delay="500" class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm shadow-sm">Github Desktop</li>
-      <li data-aos="zoom-out" data-aos-delay="550" class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm shadow-sm">Notion</li>
-      <li data-aos="zoom-out" data-aos-delay="600" class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm shadow-sm">Office Suite</li>
+      <li data-aos="zoom-out" data-aos-delay="0" class="px-4 py-2 bg-primary text-gray-800 rounded-full text-sm shadow-sm">After Effects</li>
+      <li data-aos="zoom-out" data-aos-delay="50" class="px-4 py-2 bg-primary text-gray-800 rounded-full text-sm shadow-sm">Premier Pro</li>
+      <li data-aos="zoom-out" data-aos-delay="100" class="px-4 py-2 bg-primary text-gray-800 rounded-full text-sm shadow-sm">Photoshop</li>
+      <li data-aos="zoom-out" data-aos-delay="150" class="px-4 py-2 bg-primary text-gray-800 rounded-full text-sm shadow-sm">Illustrator</li>
+      <li data-aos="zoom-out" data-aos-delay="200" class="px-4 py-2 bg-primary text-gray-800 rounded-full text-sm shadow-sm">Visual Studio Code</li>
+      <li data-aos="zoom-out" data-aos-delay="250" class="px-4 py-2 bg-primary text-gray-800 rounded-full text-sm shadow-sm">Procreate</li>
+      <li data-aos="zoom-out" data-aos-delay="300" class="px-4 py-2 bg-primary text-gray-800 rounded-full text-sm shadow-sm">Github</li>
+      <li data-aos="zoom-out" data-aos-delay="350" class="px-4 py-2 bg-primary text-gray-800 rounded-full text-sm shadow-sm">Figma</li>
+      <li data-aos="zoom-out" data-aos-delay="400" class="px-4 py-2 bg-primary text-gray-800 rounded-full text-sm shadow-sm">Figjam</li>
+      <li data-aos="zoom-out" data-aos-delay="450" class="px-4 py-2 bg-primary text-gray-800 rounded-full text-sm shadow-sm">Miro</li>
+      <li data-aos="zoom-out" data-aos-delay="500" class="px-4 py-2 bg-primary text-gray-800 rounded-full text-sm shadow-sm">Github Desktop</li>
+      <li data-aos="zoom-out" data-aos-delay="550" class="px-4 py-2 bg-primary text-gray-800 rounded-full text-sm shadow-sm">Notion</li>
+      <li data-aos="zoom-out" data-aos-delay="600" class="px-4 py-2 bg-primary text-gray-800 rounded-full text-sm shadow-sm">Office Suite</li>
     </ul>
   </section>
 
@@ -154,12 +158,14 @@
       </a>
     </nav>
   </footer>
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="compiled/scroll.js"> </script>
-  <script src="compiled/background.js" type="module"></script>
+  <script src="compiled/scriptloader.js"></script>
   <script>
     AOS.init();
   </script>
 </body>
 
 </html>
+
