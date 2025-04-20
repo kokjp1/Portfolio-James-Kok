@@ -7,5 +7,6 @@ function loadScript(src: string): void {
   
   if (window.innerWidth >= 1024) {
     loadScript('compiled/backgroundsphere.js');  
+    loadScript('compiled/tilehover.js');  
   }
   
