@@ -10,3 +10,4 @@ Daisy UI
 
 https://michalsnik.github.io/aos/
 https://daisyui.com/
+https://codingstella.com/glowy-cards-hover-effect-in-html-css-javascript/
