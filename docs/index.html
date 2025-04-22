@@ -11,7 +11,6 @@
 
 <body class="overflow-x-hidden font-inter">
   <canvas id="bg-canvas" class=" fixed inset-0 z-[-10] pointer-events-none"></canvas>
-  </div>
 
   <svg id="background-sphere" class="fixed rounded-full pointer-events-none z-[-10] hidden lg:block text-primary/20"
     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 595.28 595.28">
@@ -38,36 +37,22 @@
     <div class="navbar-start">
       <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
         </div>
-        <ul
-          tabindex="0"
-          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-          <li><a>Item 1</a></li>
-          <li>
-            <a>Parent</a>
-            <ul class="p-2">
-              <li><a>Submenu 1</a></li>
-              <li><a>Submenu 2</a></li>
-            </ul>
-          </li>
-          <li><a>Item 3</a></li>
+        <ul tabindex="0"
+          class="menu menu-sm dropdown-content bg-base-300 rounded-box z-1 mt-5 w-52 p-4 shadow text-3xl gap-2">
+          <li><a class="text-xl">James Kok</a></li>
+          <li><a class="text-xl">About me</a></li>
+          <li><a class="text-xl">Projects</a></li>
         </ul>
       </div>
-      <a class="btn btn-ghost text-xl">James Kok</a>
+      <a class="hidden sm:inline mt-2 btn btn-ghost text-xl">James Kok</a>
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
         <li><a>About me</a></li>
-        <li>
-          <details>
-            <summary>Coming soon</summary>
-            <ul class="p-2">
-              <li><a>Coming</a></li>
-              <li><a>Soon</a></li>
-            </ul>
-          </details>
-        </li>
         <li><a>Projects</a></li>
       </ul>
     </div>
@@ -75,55 +60,58 @@
       <div class="dropdown">
         <div tabindex="0" role="button" class="btn m-1">
           Theme 🎨
-          <svg
-            width="12px"
-            height="12px"
-            class="inline-block h-2 w-2 fill-current opacity-60"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 2048 2048">
+          <svg width="12px" height="12px" class="inline-block h-2 w-2 fill-current opacity-60"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
             <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
           </svg>
         </div>
-        <ul tabindex="0" class="dropdown-content bg-base-300 rounded-box z-1 w-52 p-2 shadow-2xl mt-4 overflow-y-scroll overflow-x-hidden max-h-[50vh]">
+        <ul tabindex="0"
+          class="dropdown-content bg-base-300 rounded-box z-1 w-52 p-2 shadow-2xl mt-4 overflow-y-scroll overflow-x-hidden max-h-[50vh]">
           <!-- Themes -->
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" data-theme="Light" aria-label="Light" value="light" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Dark" value="dark" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Cupcake" value="cupcake" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Bumblebee" value="bumblebee" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Emerald" value="emerald" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Corporate" value="corporate" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Synthwave" value="synthwave" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Retro" value="retro" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Cyberpunk" value="cyberpunk" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Valentine" value="valentine" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Halloween" value="halloween" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Garden" value="garden" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Forest" value="forest" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Aqua" value="aqua" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Lofi" value="lofi" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Pastel" value="pastel" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Fantasy" value="fantasy" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Wireframe" value="wireframe" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Black" value="black" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Luxury" value="luxury" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Dracula" value="dracula" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="CMYK" value="cmyk" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Autumn" value="autumn" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Business" value="business" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Acid" value="acid" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Lemonade" value="lemonade" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Night" value="night" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Coffee" value="coffee" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Winter" value="winter" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Dim" value="dim" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Nord" value="nord" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Sunset" value="sunset" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="CaramelLatte" value="caramellatte" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Abyss" value="abyss" /></li>
-          <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Silk" value="silk" /></li>
+          <li><input type="radio" name="theme-dropdown"
+              class="theme-controller w-full btn btn-sm btn-ghost justify-start" data-theme="Light" aria-label="Light"
+              value="light" /></li>
+          <li><input type="radio" name="theme-dropdown"
+              class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Dark" value="dark" /></li>
+          <li><input type="radio" name="theme-dropdown"
+              class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Bumblebee"
+              value="bumblebee" /></li>
+          <li><input type="radio" name="theme-dropdown"
+              class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Emerald" value="emerald" />
+          </li>
+          <li><input type="radio" name="theme-dropdown"
+              class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Synthwave"
+              value="synthwave" /></li>
+          <li><input type="radio" name="theme-dropdown"
+              class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Valentine"
+              value="valentine" /></li>
+          <li><input type="radio" name="theme-dropdown"
+              class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Halloween"
+              value="halloween" /></li>
+          <li><input type="radio" name="theme-dropdown"
+              class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Forest" value="forest" />
+          </li>
+          <li><input type="radio" name="theme-dropdown"
+              class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Lofi" value="lofi" /></li>
+          <li><input type="radio" name="theme-dropdown"
+              class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Dracula" value="dracula" />
+          </li>
+          <li><input type="radio" name="theme-dropdown"
+              class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Night" value="night" />
+          </li>
+          <li><input type="radio" name="theme-dropdown"
+              class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Coffee" value="coffee" />
+          </li>
+          <li><input type="radio" name="theme-dropdown"
+              class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Winter" value="winter" />
+          </li>
+          <li><input type="radio" name="theme-dropdown"
+              class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Dim" value="dim" /></li>
+          <li><input type="radio" name="theme-dropdown"
+              class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Silk" value="silk" /></li>
         </ul>
       </div>
-      
+
     </div>
   </div>
 
@@ -138,15 +126,25 @@
           data-aos-delay="200">James</span>
         <span class="inline-block" data-aos="fade-up" data-aos-anchor-placement="center-bottom"
           data-aos-delay="300">Kok</span>
-
       </h1>
-      <p class="m-5 text-lg mb-8">2e jaars CMD student aan de Hogeschool van Amsterdam.</p>
+      <p class="m-5 text-lg mb-8" data-aos="fade-up" data-aos-duration="1000">2e jaars CMD student aan de Hogeschool van Amsterdam.</p>
+      <div class="flex flex-wrap gap-2 w-full sm:w-7/12 mx-auto justify-center">
+        <div class="badge badge-lg p-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">Creatief 🎨</div>
+        <div class="badge badge-lg p-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">Detailgericht 📐</div>
+        <div class="badge badge-lg p-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">Nauwkeurig 📝</div>
+        <div class="badge badge-lg p-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">Georganiseerd 🗃️</div>
+        <div class="badge badge-lg p-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">Volhardend ⚓</div>
+        <div class="badge badge-lg p-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">Realistisch ⚖️</div>
+        <div class="badge badge-lg p-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="700">Bewkwaam 🎓</div>
+        <div class="badge badge-lg p-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="800">Enthousiast ⚡</div>
+      </div>
+      
       <a id="openingAnimation" href="#projects" class="btn btn-primary mt-8">View My Work</a>
     </div>
   </header>
 
 
-  
+
   <section id="about" class="py-16">
     <div class="container mx-auto px-18">
       <h2 class="text-3xl font-semibold">About Me</h2>
@@ -160,82 +158,93 @@
   <section class="tiles relative max-w-screen-2xl mx-auto py-8">
     <div class="container mx-auto px-18 flex flex-col gap-9">
       <h2 class="text-2xl font-semibold">Tools/Tech I Use</h2>
-      <div class="tiles__inner relative flex flex-col flex-wrap gap-6 md:flex-row ">
-        <div
-          class="tile flex flex-col gap-4 items-center justify-center rounded-xl bg-base-200 shadow-md w-full md:w-35 h-35 hover:scale-105 transition-transform duration-300 ease-in-out"
-          data-aos="zoom-out" data-aos-delay="0">
-          <img src="assets/images/icons/logos--adobe-after-effects.svg" class="w-12 h-12" alt="Tool Icon" />
-          <p class="font-semibold">After Effects</p>
+      <div class="tiles__inner relative flex flex-col flex-wrap gap-6 md:flex-row">
+        <div data-aos="zoom-out" data-aos-delay="0" class="tile-container">
+          <div
+            class="tile flex flex-col gap-4 items-center justify-center rounded-xl bg-base-200 shadow-md w-full md:w-35 h-35 transform transition-transform duration-300 ease-in-out hover:scale-105">
+            <img src="assets/images/icons/logos--adobe-after-effects.svg" class="w-12 h-12" alt="Tool Icon" />
+            <p class="font-semibold">After Effects</p>
+          </div>
         </div>
-        <div
-          class="tile flex flex-col gap-4 items-center justify-center rounded-xl bg-base-200 shadow-md w-full md:w-35 h-35 hover:scale-105 transition-transform duration-300 ease-in-out"
-          data-aos="zoom-out" data-aos-delay="50">
-          <img src="assets/images/icons/logos--adobe-illustrator.svg" class="w-12 h-12" alt="Tool Icon" />
-          <p class="font-semibold">Illustrator</p>
+        <div data-aos="zoom-out" data-aos-delay="50" class="tile-container">
+          <div
+            class="tile flex flex-col gap-4 items-center justify-center rounded-xl bg-base-200 shadow-md w-full md:w-35 h-35 transform transition-transform duration-300 ease-in-out hover:scale-105">
+            <img src="assets/images/icons/logos--adobe-illustrator.svg" class="w-12 h-12" alt="Tool Icon" />
+            <p class="font-semibold">Illustrator</p>
+          </div>
         </div>
-        <div
-          class="tile flex flex-col gap-4 items-center justify-center rounded-xl bg-base-200 shadow-md w-full md:w-35 h-35 hover:scale-105 transition-transform duration-300 ease-in-out"
-          data-aos="zoom-out" data-aos-delay="100">
-          <img src="assets/images/icons/logos--adobe-photoshop.svg" class="w-12 h-12" alt="Tool Icon" />
-          <p class="font-semibold">Photoshop</p>
+        <div data-aos="zoom-out" data-aos-delay="100" class="tile-container">
+          <div
+            class="tile flex flex-col gap-4 items-center justify-center rounded-xl bg-base-200 shadow-md w-full md:w-35 h-35 transform transition-transform duration-300 ease-in-out hover:scale-105">
+            <img src="assets/images/icons/logos--adobe-photoshop.svg" class="w-12 h-12" alt="Tool Icon" />
+            <p class="font-semibold">Photoshop</p>
+          </div>
         </div>
-        <div
-          class="tile flex flex-col gap-4 items-center justify-center rounded-xl bg-base-200 shadow-md w-full md:w-35 h-35 hover:scale-105 transition-transform duration-300 ease-in-out"
-          data-aos="zoom-out" data-aos-delay="150">
-          <img src="assets/images/icons/logos--adobe-premiere.svg" class="w-12 h-12" alt="Tool Icon" />
-          <p class="font-semibold">Premier Pro</p>
+        <div data-aos="zoom-out" data-aos-delay="150" class="tile-container">
+          <div
+            class="tile flex flex-col gap-4 items-center justify-center rounded-xl bg-base-200 shadow-md w-full md:w-35 h-35 transform transition-transform duration-300 ease-in-out hover:scale-105">
+            <img src="assets/images/icons/logos--adobe-premiere.svg" class="w-12 h-12" alt="Tool Icon" />
+            <p class="font-semibold">Premier Pro</p>
+          </div>
         </div>
-        <div
-          class="tile flex flex-col gap-4 items-center justify-center rounded-xl bg-base-200 shadow-md w-full md:w-35 h-35 hover:scale-105 transition-transform duration-300 ease-in-out"
-          data-aos="zoom-out" data-aos-delay="200">
-          <img src="assets/images/icons/devicon--figma.svg" class="w-12 h-12" alt="Tool Icon" />
-          <p class="font-semibold">Figma</p>
+        <div data-aos="zoom-out" data-aos-delay="200" class="tile-container">
+          <div
+            class="tile flex flex-col gap-4 items-center justify-center rounded-xl bg-base-200 shadow-md w-full md:w-35 h-35 transform transition-transform duration-300 ease-in-out hover:scale-105">
+            <img src="assets/images/icons/devicon--figma.svg" class="w-12 h-12" alt="Tool Icon" />
+            <p class="font-semibold">Figma</p>
+          </div>
         </div>
-        <div
-          class="tile flex flex-col gap-4 items-center justify-center rounded-xl bg-base-200 shadow-md w-full md:w-35 h-35 hover:scale-105 transition-transform duration-300 ease-in-out"
-          data-aos="zoom-out" data-aos-delay="250">
-          <img src="assets/images/icons/logos--miro-icon.svg" class="w-12 h-12" alt="Tool Icon" />
-          <p class="font-semibold">Miro</p>
+        <div data-aos="zoom-out" data-aos-delay="250" class="tile-container">
+          <div
+            class="tile flex flex-col gap-4 items-center justify-center rounded-xl bg-base-200 shadow-md w-full md:w-35 h-35 transform transition-transform duration-300 ease-in-out hover:scale-105">
+            <img src="assets/images/icons/logos--miro-icon.svg" class="w-12 h-12" alt="Tool Icon" />
+            <p class="font-semibold">Miro</p>
+          </div>
         </div>
-        <div
-          class="tile flex flex-col gap-4 items-center justify-center rounded-xl bg-base-200 shadow-md w-full md:w-35 h-35 hover:scale-105 transition-transform duration-300 ease-in-out"
-          data-aos="zoom-out" data-aos-delay="300">
-          <img src="assets/images/icons/logos--github-icon.svg" class="w-12 h-12" alt="Tool Icon" />
-          <p class="font-semibold">&lt;/Github&gt;
-          </p>
+        <div data-aos="zoom-out" data-aos-delay="300" class="tile-container">
+          <div
+            class="tile flex flex-col gap-4 items-center justify-center rounded-xl bg-base-200 shadow-md w-full md:w-35 h-35 transform transition-transform duration-300 ease-in-out hover:scale-105">
+            <img src="assets/images/icons/logos--github-icon.svg" class="w-12 h-12" alt="Tool Icon" />
+            <p class="font-semibold">&lt;/Github&gt;</p>
+          </div>
         </div>
-        <div
-          class="tile flex flex-col gap-4 items-center justify-center rounded-xl bg-base-200 shadow-md ww-full md:w-35 h-35 hover:scale-105 transition-transform duration-300 ease-in-out"
-          data-aos="zoom-out" data-aos-delay="450">
-          <img src="assets/images/icons/Github-desktop-logo-symbol.svg.png" class="w-12 h-12" alt="Tool Icon" />
-          <p class="font-semibold">&lt;/gh Desktop&gt;
-          </p>
+        <div data-aos="zoom-out" data-aos-delay="450" class="tile-container">
+          <div
+            class="tile flex flex-col gap-4 items-center justify-center rounded-xl bg-base-200 shadow-md w-full md:w-35 h-35 transform transition-transform duration-300 ease-in-out hover:scale-105">
+            <img src="assets/images/icons/Github-desktop-logo-symbol.svg.png" class="w-12 h-12" alt="Tool Icon" />
+            <p class="font-semibold">&lt;/gh Desktop&gt;</p>
+          </div>
         </div>
-        <div
-          class="tile flex flex-col gap-4 items-center justify-center rounded-xl bg-base-200 shadow-md w-full md:w-35 h-35 hover:scale-105 transition-transform duration-300 ease-in-out"
-          data-aos="zoom-out" data-aos-delay="500">
-          <img src="assets/images/icons/htmlcss.svg" class="w-12 h-12" alt="Tool Icon" />
-          <p class="font-semibold">&lt;/HTML/CSS&gt;</p>
+        <div data-aos="zoom-out" data-aos-delay="100" class="tile-container">
+          <div
+            class="tile flex flex-col gap-4 items-center justify-center rounded-xl bg-base-200 shadow-md w-full md:w-35 h-35 transform transition-transform duration-300 ease-in-out hover:scale-105">
+            <img src="assets/images/icons/htmlcss.svg" class="w-12 h-12" alt="Tool Icon" />
+            <p class="font-semibold">&lt;/HTML/CSS&gt;</p>
+          </div>
         </div>
-        <div
-          class="tile flex flex-col gap-4 items-center justify-center rounded-xl bg-base-200 shadow-md w-full md:w-35 h-35 hover:scale-105 transition-transform duration-300 ease-in-out"
-          data-aos="zoom-out" data-aos-delay="550">
-          <img src="assets/images/icons/logos--javascript.svg" class="w-12 h-12" alt="Tool Icon" />
-          <p class="font-semibold">&lt;/Javascript&gt;</p>
+        <div data-aos="zoom-out" data-aos-delay="150" class="tile-container">
+          <div
+            class="tile flex flex-col gap-4 items-center justify-center rounded-xl bg-base-200 shadow-md w-full md:w-35 h-35 transform transition-transform duration-300 ease-in-out hover:scale-105">
+            <img src="assets/images/icons/logos--javascript.svg" class="w-12 h-12" alt="Tool Icon" />
+            <p class="font-semibold">&lt;/Javascript&gt;</p>
+          </div>
         </div>
-        <div
-          class="tile flex flex-col gap-4 items-center justify-center rounded-xl bg-base-200 shadow-md w-full md:w-35 h-35 hover:scale-105 transition-transform duration-300 ease-in-out"
-          data-aos="zoom-out" data-aos-delay="600">
-          <img src="assets/images/icons/devicon--typescript.svg" class="w-12 h-12" alt="Tool Icon" />
-          <p class="font-semibold">&lt;/Typescript&gt;</p>
+        <div data-aos="zoom-out" data-aos-delay="200" class="tile-container">
+          <div
+            class="tile flex flex-col gap-4 items-center justify-center rounded-xl bg-base-200 shadow-md w-full md:w-35 h-35 transform transition-transform duration-300 ease-in-out hover:scale-105">
+            <img src="assets/images/icons/devicon--typescript.svg" class="w-12 h-12" alt="Tool Icon" />
+            <p class="font-semibold">&lt;/Typescript&gt;</p>
+          </div>
         </div>
-        <div
-          class="tile flex flex-col gap-4 items-center justify-center rounded-xl bg-base-200 shadow-md w-full md:w-35 h-35 hover:scale-105 transition-transform duration-300 ease-in-out"
-          data-aos="zoom-out" data-aos-delay="650">
-          <img src="assets/images/icons/devicon--tailwindcss.svg" class="w-12 h-12" alt="Tool Icon" />
-          <p class="font-semibold">&lt;/TailwindCSS&gt;</p>
+        <div data-aos="zoom-out" data-aos-delay="250" class="tile-container">
+          <div
+            class="tile flex flex-col gap-4 items-center justify-center rounded-xl bg-base-200 shadow-md w-full md:w-35 h-35 transform transition-transform duration-300 ease-in-out hover:scale-105">
+            <img src="assets/images/icons/devicon--tailwindcss.svg" class="w-12 h-12" alt="Tool Icon" />
+            <p class="font-semibold">&lt;/TailwindCSS&gt;</p>
+          </div>
         </div>
       </div>
+
 
       <div
         class="overlay tiles__inner absolute top-25 flex flex-wrap gap-6 pointer-events-none z-1 xl:w-[90%] lg:w-[80%]"
