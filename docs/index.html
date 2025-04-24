@@ -13,7 +13,7 @@
   <canvas id="bg-canvas" class=" fixed inset-0 z-[-10] pointer-events-none"></canvas>
 
   <svg id="background-sphere" class="fixed rounded-full pointer-events-none z-[-10] hidden lg:block text-primary/20"
-    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 595.28 595.28">
+       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 595.28">
     <defs>
       <style>
         .cls-1 {
@@ -232,17 +232,19 @@
       </div>
 
 
+      <!--suppress CssInvalidPropertyValue -->
       <div
         class="overlay tiles__inner absolute top-25 flex flex-wrap gap-6 pointer-events-none z-1 xl:w-[90%] lg:w-[80%]"
         style="--opacity: 0; --x: 0px; --y: 0px; mask-image: radial-gradient(25rem 25rem at var(--x) var(--y), #000 1%, transparent 50%); -webkit-mask-image: radial-gradient(25rem 25rem at var(--x) var(--y), #000 1%, transparent 50%); transition: mask-image 400ms ease;">
       </div>
+    </div>
   </section>
 
   <section id="projects" class="py-16">
     <div class="container mx-auto px-18 text-center">
-      <div class="flex flex-row justify-between">
-        <h2 class="text-3xl font-semibold">Featured projects<h2>
-            <a href="projects.html" class="btn">View all projects</a>
+      <div class="flex flex-row justify-between items-center">
+        <h2 class="text-3xl font-semibold">Featured projects</h2>
+        <a href="projects.html" class="btn">View all projects</a>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
         <div data-aos="fade-down" data-aos-delay="100" class="card w-full bg-base-100 shadow-xl">
@@ -288,7 +290,9 @@
       <p class="mt-4 text-lg">Contact me via the form beluhw</p>
       <form action="#" method="POST" class="mt-8 max-w-lg mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <input type="text" name="name" placeholder="Your Name" class="input input-bordered w-full" required>
+          <label>
+            <input type="text" name="name" placeholder="Your Name" class="input input-bordered w-full" required>
+          </label>
           <input type="email" name="email" placeholder="Your Email" class="input input-bordered w-full" required>
         </div>
         <textarea name="message" placeholder="Your Message" class="textarea textarea-bordered w-full mt-4" rows="4"
