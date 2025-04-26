@@ -11,3 +11,5 @@ Daisy UI
 https://michalsnik.github.io/aos/
 https://daisyui.com/
 https://codingstella.com/glowy-cards-hover-effect-in-html-css-javascript/
+
+to-do: fix image size (PC pictures, test later to see if necessary, very slow atm)
