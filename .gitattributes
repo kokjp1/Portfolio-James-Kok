@@ -1,4 +1,7 @@
-# include all TS/CSS/JS under docs/
-docs/**/*.ts linguist-detectable=true
-docs/**/*.css linguist-detectable=true
-docs/**/*.js linguist-detectable=true
+# 1) make TS/CSS/JS under docs/ detectable…
+docs/**/*.ts   linguist-detectable=true
+docs/**/*.css  linguist-detectable=true
+docs/**/*.js   linguist-detectable=true
+
+# 2) …and force linguist to stop classifying docs/ as “documentation”
+docs/**        linguist-documentation=false
