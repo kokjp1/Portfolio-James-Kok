@@ -1,0 +1,4 @@
+# include all TS/CSS/JS under docs/
+docs/**/*.ts linguist-detectable=true
+docs/**/*.css linguist-detectable=true
+docs/**/*.js linguist-detectable=true
