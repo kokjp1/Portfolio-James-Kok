@@ -41,7 +41,9 @@
   <!--                                   nav                                   -->
   <!-- ----------------------------------------------------------------------- -->
 
-  <div class="navbar bg-base-300 shadow-sm w-3/4 mx-auto rounded-xl sticky top-8 z-100 border-2 border-base-200">
+  <div class="container mx-auto px-18 sticky top-8 z-100">
+    <div class="navbar bg-base-300 shadow-sm mx-auto rounded-xl border-2 border-base-200 w-full mt-0">
+
     <div class="navbar-start">
       <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -123,12 +125,15 @@
 
     </div>
   </div>
+</div>
+
+<main class="flex flex-col gap-64">
 
   <!-- ----------------------------------------------------------------------- -->
   <!--                                  hero                                   -->
   <!-- ----------------------------------------------------------------------- -->
 
-  <header class="hero text-center py-16 flex items-center justify-center min-h-[75vh]">
+  <header class="hero text-center flex items-center justify-center min-h-[75vh]">
     <div class="text-center">
       <h1 class="text-4xl font-bold mb-4">
         <span class="inline-block" data-aos="fade-up" data-aos-anchor-placement="center-bottom"
@@ -150,7 +155,7 @@
   <!--                                  intro                                  -->
   <!-- ----------------------------------------------------------------------- -->
 
-  <section id="about" class="py-16">
+  <section id="about"">
     <div class="container mx-auto px-18">
       <h2 class="text-3xl font-semibold">About Me</h2>
       <p class="mt-4 text-lg">Welcome to my portfolio. I am a 19 year old Student at the Amsterdam University of Applied
@@ -164,10 +169,10 @@
   <!--                             toos/tech tiles                             -->
   <!-- ----------------------------------------------------------------------- -->
 
-  <section class="tiles relative max-w-screen-2xl mx-auto py-8">
+  <section class="tiles relative max-w-screen-2xl mx-auto">
     <div class="container mx-auto px-18 flex flex-col gap-9">
       <h2 class="text-2xl font-semibold">Tools/Tech I Use</h2>
-      <div class="tiles__inner relative flex flex-col flex-wrap gap-6 md:flex-row">
+      <div class="tiles__inner relative flex flex-col flex-wrap gap-6 md:flex-row py-8">
         <div data-aos="zoom-out" data-aos-delay="0" class="tile-container">
           <div
             class="tile flex flex-col gap-4 items-center justify-center rounded-xl bg-base-200 border-3 border-primary/20 shadow-md w-full md:w-35 h-35 transform transition-transform duration-300 ease-in-out hover:scale-105">
@@ -259,8 +264,6 @@
         style="--opacity: 0; --x: 0px; --y: 0px; mask-image: radial-gradient(25rem 25rem at var(--x) var(--y), #000 1%, transparent 50%); -webkit-mask-image: radial-gradient(25rem 25rem at var(--x) var(--y), #000 1%, transparent 50%); transition: mask-image 400ms ease;">
       </div>
     </div>
-  </section>
-
   <!-- ----------------------------------------------------------------------- -->
   <!--                               dev roadmap                               -->
   <!-- ----------------------------------------------------------------------- -->
@@ -323,12 +326,13 @@
       </ul>
     </div>
   </div>
+</section>
 
   <!-- ----------------------------------------------------------------------- -->
   <!--                            featured projects                            -->
   <!-- ----------------------------------------------------------------------- -->
 
-  <section id="projects" class="py-16">
+  <section id="projects">
     <div class="container mx-auto px-18 text-center">
       <div class="flex flex-row justify-between items-center">
         <h2 class="text-3xl font-semibold">Featured projects</h2>
@@ -376,7 +380,7 @@
   <!--                                 contact                                 -->
   <!-- ----------------------------------------------------------------------- -->
 
-  <section id="contact" class="py-16">
+  <section id="contact">
     <div class="container mx-auto px-18 text-center">
       <h2 class="text-3xl font-semibold">Contact Me</h2>
       <p class="mt-4 text-lg">Contact me via the form beluhw</p>
@@ -398,11 +402,13 @@
     </div>
   </section>
 
+  </main>
+
   <!-- ----------------------------------------------------------------------- -->
   <!--                                 footer                                  -->
   <!-- ----------------------------------------------------------------------- -->
 
-  <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content items-center px-12 py-8">
+  <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content items-center px-12 py-8 mt-24">
     <aside class="grid-flow-col items-center">
       <svg width="36" height="36" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
         clip-rule="evenodd" class="fill-current">
