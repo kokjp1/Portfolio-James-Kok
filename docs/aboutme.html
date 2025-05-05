@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="dracula" lang="en">
+<html data-theme="dracula" lang="en" class="preloading">
 
 <head>
     <meta charset="UTF-8">
@@ -139,107 +139,112 @@
 
     <main class="flex flex-col gap-64">
 
-    <!-- ----------------------------------------------------------------------- -->
-    <!--                                  intro                                  -->
-    <!-- ----------------------------------------------------------------------- -->
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                                  intro                                  -->
+        <!-- ----------------------------------------------------------------------- -->
 
-    <section id="about" class="sm:pt-64 pt-24">
+        <section id="about" class="sm:pt-64 pt-24">
+            <div class="container mx-auto px-18">
+                <h2 class="text-3xl font-semibold">About Me</h2>
+                <p class="mt-4 text-lg">Mensen omschrijven mij als humoristisch, aanwezig, sympathiek, makkelijk in de
+                    omgang en energiek. Mensen in mijn omgeving ervaren dat ik verbaal en communicatief altijd 'aan
+                    sta'. Ik
+                    ben woonachtig in Amsterdam (zuid).</p>
+            </div>
+            <!-- ----------------------------------------------------------------------- -->
+            <!--                               kwaliteiten                               -->
+            <!-- ----------------------------------------------------------------------- -->
+
+            <div class="container mx-auto px-4 py-8">
+                <div class="flex flex-wrap justify-center sm:justify-start sm:px-12">
+                    <div class="badge badge-lg m-1 p-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+                        Creatief 🎨
+                    </div>
+                    <div class="badge badge-lg m-1 p-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+                        Detailgericht 📐
+                    </div>
+                    <div class="badge badge-lg m-1 p-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                        Nauwkeurig 📝
+                    </div>
+                    <div class="badge badge-lg m-1 p-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+                        Georganiseerd 🗃️
+                    </div>
+                    <div class="badge badge-lg m-1 p-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+                        Volhardend ⚓
+                    </div>
+                    <div class="badge badge-lg m-1 p-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">
+                        Realistisch ⚖️
+                    </div>
+                    <div class="badge badge-lg m-1 p-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="700">
+                        Bewkwaam 🎓
+                    </div>
+                    <div class="badge badge-lg m-1 p-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="800">
+                        Enthousiast ⚡
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                              image gallery                              -->
+        <!-- ----------------------------------------------------------------------- -->
+
         <div class="container mx-auto px-18">
-            <h2 class="text-3xl font-semibold">About Me</h2>
-            <p class="mt-4 text-lg">Mensen omschrijven mij als humoristisch, aanwezig, sympathiek, makkelijk in de
-                omgang en energiek. Mensen in mijn omgeving ervaren dat ik verbaal en communicatief altijd 'aan sta'. Ik
-                ben woonachtig in Amsterdam (zuid).</p>
+            <h2 class="text-3xl font-semibold mb-12">Image Gallery</h2>
+            <div id="gallery" class="columns-2 sm:columns-3 md:columns-4 gap-4 max-w-screen-xl gallery-hover">
+                <a href="assets/images/PC-on.jpg" data-pswp-width="1600" data-pswp-height="1200"
+                    class="block mb-4 rounded-lg group gallery-image h-48 overflow-hidden break-inside-avoid">
+                    <img src="assets/images/PC-on.jpg" alt="Gallery Image"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer" />
+                </a>
+                <a href="assets/images/PC-off.jpg" data-pswp-width="1600" data-pswp-height="1200"
+                    class="block mb-4 rounded-lg group gallery-image h-64 overflow-hidden break-inside-avoid">
+                    <img src="assets/images/PC-off.jpg" alt="Gallery Image"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer" />
+                </a>
+                <a href="assets/images/WEB_DBp_20250422_FutureReady_0018.jpg" data-pswp-width="1600"
+                    data-pswp-height="1200"
+                    class="block mb-4 rounded-lg group gallery-image h-56 overflow-hidden break-inside-avoid">
+                    <img src="assets/images/WEB_DBp_20250422_FutureReady_0018.jpg" alt="Gallery Image"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer" />
+                </a>
+                <a href="assets/images/WEB_DBp_20250422_FutureReady_0027.jpg" data-pswp-width="1600"
+                    data-pswp-height="1200"
+                    class="block mb-4 rounded-lg group gallery-image h-72 overflow-hidden break-inside-avoid">
+                    <img src="assets/images/WEB_DBp_20250422_FutureReady_0027.jpg" alt="Gallery Image"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer" />
+                </a>
+                <a href="assets/images/WEB_DBp_20250422_FutureReady_0031.jpg" data-pswp-width="1600"
+                    data-pswp-height="1200"
+                    class="block mb-4 rounded-lg group gallery-image h-60 overflow-hidden break-inside-avoid">
+                    <img src="assets/images/WEB_DBp_20250422_FutureReady_0031.jpg" alt="Gallery Image"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer" />
+                </a>
+                <a href="assets/images/WEB_DBp_20250422_FutureReady_0459.jpg" data-pswp-width="1600"
+                    data-pswp-height="1200"
+                    class="block mb-4 rounded-lg group gallery-image h-52 overflow-hidden break-inside-avoid">
+                    <img src="assets/images/WEB_DBp_20250422_FutureReady_0459.jpg" alt="Gallery Image"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer" />
+                </a>
+                <a href="assets/images/PC-on.jpg" data-pswp-width="1600" data-pswp-height="1200"
+                    class="block mb-4 rounded-lg group gallery-image h-68 overflow-hidden break-inside-avoid">
+                    <img src="assets/images/PC-on.jpg" alt="Gallery Image"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer" />
+                </a>
+                <a href="assets/images/PC-off.jpg" data-pswp-width="1600" data-pswp-height="1200"
+                    class="block mb-4 rounded-lg group gallery-image h-50 overflow-hidden break-inside-avoid">
+                    <img src="assets/images/PC-off.jpg" alt="Gallery Image"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer" />
+                </a>
+            </div>
         </div>
-    <!-- ----------------------------------------------------------------------- -->
-    <!--                               kwaliteiten                               -->
-    <!-- ----------------------------------------------------------------------- -->
 
-    <div class="container mx-auto px-4 py-8">
-        <div class="flex flex-wrap justify-center sm:justify-start sm:px-12">
-            <div class="badge badge-lg m-1 p-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                Creatief 🎨
-            </div>
-            <div class="badge badge-lg m-1 p-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-                Detailgericht 📐
-            </div>
-            <div class="badge badge-lg m-1 p-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
-                Nauwkeurig 📝
-            </div>
-            <div class="badge badge-lg m-1 p-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
-                Georganiseerd 🗃️
-            </div>
-            <div class="badge badge-lg m-1 p-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
-                Volhardend ⚓
-            </div>
-            <div class="badge badge-lg m-1 p-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">
-                Realistisch ⚖️
-            </div>
-            <div class="badge badge-lg m-1 p-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="700">
-                Bewkwaam 🎓
-            </div>
-            <div class="badge badge-lg m-1 p-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="800">
-                Enthousiast ⚡
-            </div>
-        </div>
-    </div>
-</section>
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                                  diff                                   -->
+        <!-- ----------------------------------------------------------------------- -->
 
-
-    <!-- ----------------------------------------------------------------------- -->
-    <!--                              image gallery                              -->
-    <!-- ----------------------------------------------------------------------- -->
-
-    <div class="container mx-auto px-18">
-        <h2 class="text-3xl font-semibold mb-12">Image Gallery</h2>
-        <div id="gallery" class="columns-2 sm:columns-3 md:columns-4 gap-4 max-w-screen-xl gallery-hover">
-            <a href="assets/images/PC-on.jpg" data-pswp-width="1600" data-pswp-height="1200"
-                class="block mb-4 rounded-lg group gallery-image h-48 overflow-hidden break-inside-avoid">
-                <img src="assets/images/PC-on.jpg" alt="Gallery Image"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer" />
-            </a>
-            <a href="assets/images/PC-off.jpg" data-pswp-width="1600" data-pswp-height="1200"
-                class="block mb-4 rounded-lg group gallery-image h-64 overflow-hidden break-inside-avoid">
-                <img src="assets/images/PC-off.jpg" alt="Gallery Image"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer" />
-            </a>
-            <a href="assets/images/WEB_DBp_20250422_FutureReady_0018.jpg" data-pswp-width="1600" data-pswp-height="1200"
-                class="block mb-4 rounded-lg group gallery-image h-56 overflow-hidden break-inside-avoid">
-                <img src="assets/images/WEB_DBp_20250422_FutureReady_0018.jpg" alt="Gallery Image"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer" />
-            </a>
-            <a href="assets/images/WEB_DBp_20250422_FutureReady_0027.jpg" data-pswp-width="1600" data-pswp-height="1200"
-                class="block mb-4 rounded-lg group gallery-image h-72 overflow-hidden break-inside-avoid">
-                <img src="assets/images/WEB_DBp_20250422_FutureReady_0027.jpg" alt="Gallery Image"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer" />
-            </a>
-            <a href="assets/images/WEB_DBp_20250422_FutureReady_0031.jpg" data-pswp-width="1600" data-pswp-height="1200"
-                class="block mb-4 rounded-lg group gallery-image h-60 overflow-hidden break-inside-avoid">
-                <img src="assets/images/WEB_DBp_20250422_FutureReady_0031.jpg" alt="Gallery Image"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer" />
-            </a>
-            <a href="assets/images/WEB_DBp_20250422_FutureReady_0459.jpg" data-pswp-width="1600" data-pswp-height="1200"
-                class="block mb-4 rounded-lg group gallery-image h-52 overflow-hidden break-inside-avoid">
-                <img src="assets/images/WEB_DBp_20250422_FutureReady_0459.jpg" alt="Gallery Image"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer" />
-            </a>
-            <a href="assets/images/PC-on.jpg" data-pswp-width="1600" data-pswp-height="1200"
-                class="block mb-4 rounded-lg group gallery-image h-68 overflow-hidden break-inside-avoid">
-                <img src="assets/images/PC-on.jpg" alt="Gallery Image"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer" />
-            </a>
-            <a href="assets/images/PC-off.jpg" data-pswp-width="1600" data-pswp-height="1200"
-                class="block mb-4 rounded-lg group gallery-image h-50 overflow-hidden break-inside-avoid">
-                <img src="assets/images/PC-off.jpg" alt="Gallery Image"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer" />
-            </a>
-        </div>
-    </div>
-
-    <!-- ----------------------------------------------------------------------- -->
-    <!--                                  diff                                   -->
-    <!-- ----------------------------------------------------------------------- -->
-
-    <!-- <figure class="diff aspect-3/2 w-3/4 sm:w-1/4 mx-auto rounded-2xl" tabindex="0">
+        <!-- <figure class="diff aspect-3/2 w-3/4 sm:w-1/4 mx-auto rounded-2xl" tabindex="0">
         <div class="diff-item-1" role="img" tabindex="0">
             <img alt="daisy" src="assets/images/PC-on.jpg" />
         </div>
@@ -249,99 +254,101 @@
         <div class="diff-resizer"></div>
     </figure> -->
 
-    <!-- ----------------------------------------------------------------------- -->
-    <!--                              certificaten                               -->
-    <!-- ----------------------------------------------------------------------- -->
+        <!-- ----------------------------------------------------------------------- -->
+        <!--                              certificaten                               -->
+        <!-- ----------------------------------------------------------------------- -->
 
-    <div class="container mx-auto px-6 sm:px-18 sm:w-3/5 flex flex-col gap-3 w-full mb-24">
-        <div class="collapse collapse-plus bg-base-100 border border-base-300">
-            <input type="radio" name="my-accordion-3" checked="checked" />
-            <div class="collapse-title font-semibold">Cambridge Certificate</div>
-            <div class="collapse-content text-sm flex justify-between gap-4">
-                <p>Cambridge English Certificate. Mijn resultaat was C1. Om te weten wat mijn Cambrige Certificaat voor
-                    u
-                    kan betekenen, kunt u de officiele video van het Cambridge instituut kijken.</p>
-                <img src="assets/images/cambridge.jpg" class="max-h-[5vh] cursor-pointer"
-                    onclick="my_modal_5.showModal()" alt="cambridge certificate">
-                <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-                    <div class="modal-box">
-                        <h3 class="text-lg font-bold">Cambridge Certificate</h3>
-                        <img src="assets/images/cambridge.jpg" class="max-h-[5-vh] cursor-pointer py-4"
-                            alt="cambridge certificate">
-                        <div class="modal-action">
-                            <form method="dialog">
-                                <button class="btn">Close</button>
-                            </form>
+        <div class="container mx-auto px-6 sm:px-18 sm:w-3/5 flex flex-col gap-3 w-full mb-24">
+            <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-3" checked="checked" />
+                <div class="collapse-title font-semibold">Cambridge Certificate</div>
+                <div class="collapse-content text-sm flex justify-between gap-4">
+                    <p>Cambridge English Certificate. Mijn resultaat was C1. Om te weten wat mijn Cambrige Certificaat
+                        voor
+                        u
+                        kan betekenen, kunt u de officiele video van het Cambridge instituut kijken.</p>
+                    <img src="assets/images/cambridge.jpg" class="max-h-[5vh] cursor-pointer"
+                        onclick="my_modal_5.showModal()" alt="cambridge certificate">
+                    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                        <div class="modal-box">
+                            <h3 class="text-lg font-bold">Cambridge Certificate</h3>
+                            <img src="assets/images/cambridge.jpg" class="max-h-[5-vh] cursor-pointer py-4"
+                                alt="cambridge certificate">
+                            <div class="modal-action">
+                                <form method="dialog">
+                                    <button class="btn">Close</button>
+                                </form>
+                            </div>
                         </div>
-                    </div>
-                </dialog>
-            </div>
-        </div>
-        <div class="collapse collapse-plus bg-base-100 border border-base-300">
-            <input type="radio" name="my-accordion-3" checked="checked" />
-            <div class="collapse-title font-semibold">Propedeuse CMD</div>
-            <div class="collapse-content text-sm flex justify-between gap-4">
-                <p>Cum Laude Propedeuse aan de Hogeschool van Amsterdam (2024).</p>
-                <img src="assets/images/propedeuse.jpg" class="max-h-[5vh] cursor-pointer"
-                    onclick="my_modal_6.showModal()" alt="Propedeutic Exam CMD">
-                <dialog id="my_modal_6" class="modal modal-bottom sm:modal-middle">
-                    <div class="modal-box">
-                        <h3 class="text-lg font-bold">Propedeuse CMD</h3>
-                        <img src="assets/images/propedeuse.jpg" class="max-h-[5-vh] cursor-pointer py-4"
-                            alt="Propedeutic Exam CMD">
-                        <div class="modal-action">
-                            <form method="dialog">
-                                <button class="btn">Close</button>
-                            </form>
-                        </div>
-                    </div>
-                </dialog>
-            </div>
-        </div>
-        <div class="collapse collapse-plus bg-base-100 border border-base-300">
-            <input type="radio" name="my-accordion-3" checked="checked" />
-            <div class="collapse-title font-semibold">PWS Prijs</div>
-            <div class="collapse-content text-sm flex justify-between gap-4">
-                <div class="flex flex-col">
-                    <p>
-                        Dit certificaat is uitgedeeld aan het beste PWS van de (HAVO) eindexamenklas 2023.
-                        Het PWS ging over hoe games gemaakt worden. We hebben uitgebreid onderzoek gedaan naar
-                        het complete proces van Games ontwikkelen, en hebben hiervoor onder meer met de CEO van
-                        een game bedrijf gesproken
-                    </p>
-                    <a href="https://1drv.ms/w/c/2cf1b3bc7dff1546/EUyVZJWD9j1BlREdKAEM1DkB3_cPfXwnSh1uHtcEXXKtCg?e=PDseDr"
-                        target="_blank" class="mt-2 underline text-blue-600 inline-flex items-center gap-1">
-                        Profielwerkstuk
-                        <img src="assets/images/external-link.svg" class="w-4 h-4" alt="Propedeutic Exam CMD">
-                    </a>
+                    </dialog>
                 </div>
-                <img src="assets/images/PWSprijs.jpg" class="max-h-[5vh] cursor-pointer"
-                    onclick="my_modal_7.showModal()" alt="Propedeutic Exam CMD">
-                <dialog id="my_modal_7" class="modal modal-bottom sm:modal-middle">
-                    <div class="modal-box">
-                        <h3 class="text-lg font-bold">PWS Prijs</h3>
-                        <img src="assets/images/PWSprijs.jpg" class="max-h-[50vh] cursor-pointer py-4" alt="PWS Prijs">
-                        <div class="modal-action">
-                            <form method="dialog">
-                                <button class="btn">Close</button>
-                            </form>
+            </div>
+            <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-3" checked="checked" />
+                <div class="collapse-title font-semibold">Propedeuse CMD</div>
+                <div class="collapse-content text-sm flex justify-between gap-4">
+                    <p>Cum Laude Propedeuse aan de Hogeschool van Amsterdam (2024).</p>
+                    <img src="assets/images/propedeuse.jpg" class="max-h-[5vh] cursor-pointer"
+                        onclick="my_modal_6.showModal()" alt="Propedeutic Exam CMD">
+                    <dialog id="my_modal_6" class="modal modal-bottom sm:modal-middle">
+                        <div class="modal-box">
+                            <h3 class="text-lg font-bold">Propedeuse CMD</h3>
+                            <img src="assets/images/propedeuse.jpg" class="max-h-[5-vh] cursor-pointer py-4"
+                                alt="Propedeutic Exam CMD">
+                            <div class="modal-action">
+                                <form method="dialog">
+                                    <button class="btn">Close</button>
+                                </form>
+                            </div>
                         </div>
+                    </dialog>
+                </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-3" checked="checked" />
+                <div class="collapse-title font-semibold">PWS Prijs</div>
+                <div class="collapse-content text-sm flex justify-between gap-4">
+                    <div class="flex flex-col">
+                        <p>
+                            Dit certificaat is uitgedeeld aan het beste PWS van de (HAVO) eindexamenklas 2023.
+                            Het PWS ging over hoe games gemaakt worden. We hebben uitgebreid onderzoek gedaan naar
+                            het complete proces van Games ontwikkelen, en hebben hiervoor onder meer met de CEO van
+                            een game bedrijf gesproken
+                        </p>
+                        <a href="https://1drv.ms/w/c/2cf1b3bc7dff1546/EUyVZJWD9j1BlREdKAEM1DkB3_cPfXwnSh1uHtcEXXKtCg?e=PDseDr"
+                            target="_blank" class="mt-2 underline text-blue-600 inline-flex items-center gap-1">
+                            Profielwerkstuk
+                            <img src="assets/images/external-link.svg" class="w-4 h-4" alt="Propedeutic Exam CMD">
+                        </a>
                     </div>
-                </dialog>
+                    <img src="assets/images/PWSprijs.jpg" class="max-h-[5vh] cursor-pointer"
+                        onclick="my_modal_7.showModal()" alt="Propedeutic Exam CMD">
+                    <dialog id="my_modal_7" class="modal modal-bottom sm:modal-middle">
+                        <div class="modal-box">
+                            <h3 class="text-lg font-bold">PWS Prijs</h3>
+                            <img src="assets/images/PWSprijs.jpg" class="max-h-[50vh] cursor-pointer py-4"
+                                alt="PWS Prijs">
+                            <div class="modal-action">
+                                <form method="dialog">
+                                    <button class="btn">Close</button>
+                                </form>
+                            </div>
+                        </div>
+                    </dialog>
+                </div>
             </div>
         </div>
-    </div>
-    <dialog id="gallery_modal" class="modal modal-bottom sm:modal-middle">
-        <div class="modal-box p-2">
-            <img id="gallery_modal_img" src="" alt="Expanded Gallery Image" class="w-full rounded-lg" />
-            <div class="modal-action">
-                <form method="dialog">
-                    <button class="btn">Close</button>
-                </form>
+        <dialog id="gallery_modal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box p-2">
+                <img id="gallery_modal_img" src="" alt="Expanded Gallery Image" class="w-full rounded-lg" />
+                <div class="modal-action">
+                    <form method="dialog">
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
             </div>
-        </div>
-    </dialog>
-    
+        </dialog>
+
     </main>
 
     <!-- ----------------------------------------------------------------------- -->
@@ -393,7 +400,10 @@
     <!-- ----------------------------------------------------------------------- -->
     <!--                            script(s) imports                            -->
     <!-- ----------------------------------------------------------------------- -->
-
+    <script src="compiled/pageLoader.js"></script>
+    <script src="compiled/scroll.js"> </script>
+    <script src="compiled/themeSelector.js"></script>
+    <script src="compiled/scriptLoader.js"></script>
     <script type="module">
         import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.js';
         const lightbox = new PhotoSwipeLightbox({
@@ -403,11 +413,7 @@
         });
         lightbox.init();
     </script>
-
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="compiled/scroll.js"></script>
-    <script src="compiled/themeselector.js"></script>
-    <script src="compiled/scriptloader.js"></script>
     <script>
         AOS.init();
     </script>

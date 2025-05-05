@@ -27,3 +27,8 @@
 	filter: blur(1.5px) grayscale(0.5) brightness(.85);
 	transition: filter 0.3s ease;
 }
+
+
+html.preloading {
+  visibility: hidden;
+}
