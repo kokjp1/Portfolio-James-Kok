@@ -9,7 +9,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-blue-600: oklch(54.6% 0.245 262.881);
-    --color-black: #000;
     --spacing: 0.25rem;
     --breakpoint-xl: 80rem;
     --breakpoint-2xl: 96rem;
@@ -279,6 +278,47 @@
       }
     }
   }
+  .drawer-side {
+    pointer-events: none;
+    visibility: hidden;
+    position: fixed;
+    inset-inline-start: calc(0.25rem * 0);
+    top: calc(0.25rem * 0);
+    grid-column-start: 1;
+    grid-row-start: 1;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    align-items: flex-start;
+    justify-items: start;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    overscroll-behavior: contain;
+    opacity: 0%;
+    transition: opacity 0.2s ease-out 0.1s allow-discrete, visibility 0.3s ease-out 0.1s allow-discrete;
+    height: 100vh;
+    height: 100dvh;
+    > .drawer-overlay {
+      position: sticky;
+      top: calc(0.25rem * 0);
+      cursor: pointer;
+      place-self: stretch;
+      background-color: oklch(0% 0 0 / 40%);
+    }
+    > * {
+      grid-column-start: 1;
+      grid-row-start: 1;
+    }
+    > *:not(.drawer-overlay) {
+      will-change: transform;
+      transition: translate 0.3s ease-out;
+      translate: -100%;
+      [dir="rtl"] & {
+        translate: 100%;
+      }
+    }
+  }
   .drawer-open {
     > .drawer-side {
       overflow-y: auto;
@@ -308,6 +348,28 @@
         pointer-events: auto;
         visibility: visible;
       }
+    }
+  }
+  .drawer-toggle {
+    position: fixed;
+    height: calc(0.25rem * 0);
+    width: calc(0.25rem * 0);
+    appearance: none;
+    opacity: 0%;
+    &:checked {
+      & ~ .drawer-side {
+        pointer-events: auto;
+        visibility: visible;
+        overflow-y: auto;
+        opacity: 100%;
+        & > *:not(.drawer-overlay) {
+          translate: 0%;
+        }
+      }
+    }
+    &:focus-visible ~ .drawer-content label.drawer-button {
+      outline: 2px solid;
+      outline-offset: 2px;
     }
   }
   .tooltip {
@@ -1665,6 +1727,11 @@
     overflow-y: auto;
     overscroll-behavior: contain;
   }
+  .drawer-content {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    min-width: calc(0.25rem * 0);
+  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -1682,6 +1749,9 @@
     @media (width >= 96rem) {
       max-width: 96rem;
     }
+  }
+  .-m-1 {
+    margin: calc(var(--spacing) * -1);
   }
   .m-1 {
     margin: calc(var(--spacing) * 1);
@@ -1731,8 +1801,11 @@
       }
     }
   }
-  .mx-16 {
-    margin-inline: calc(var(--spacing) * 16);
+  .mx-\[50\%\] {
+    margin-inline: 50%;
+  }
+  .mx-\[55\%\] {
+    margin-inline: 55%;
   }
   .mx-auto {
     margin-inline: auto;
@@ -1745,6 +1818,9 @@
     display: flex;
     justify-content: flex-end;
     gap: calc(0.25rem * 2);
+  }
+  .mt-0 {
+    margin-top: calc(var(--spacing) * 0);
   }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
@@ -1823,6 +1899,12 @@
   }
   .mb-24 {
     margin-bottom: calc(var(--spacing) * 24);
+  }
+  .ml-1 {
+    margin-left: calc(var(--spacing) * 1);
+  }
+  .ml-4 {
+    margin-left: calc(var(--spacing) * 4);
   }
   .badge {
     display: inline-flex;
@@ -2022,9 +2104,6 @@
   .aspect-3\/2 {
     aspect-ratio: 3/2;
   }
-  .aspect-\[4\/3\] {
-    aspect-ratio: 4/3;
-  }
   .modal-bottom {
     place-items: end;
     :where(.modal-box) {
@@ -2121,6 +2200,9 @@
   .w-52 {
     width: calc(var(--spacing) * 52);
   }
+  .w-\[110\%\] {
+    width: 110%;
+  }
   .w-full {
     width: 100%;
   }
@@ -2158,22 +2240,6 @@
     background-repeat: no-repeat;
     background-position-x: -50%;
   }
-  .link {
-    cursor: pointer;
-    text-decoration-line: underline;
-    &:focus {
-      --tw-outline-style: none;
-      outline-style: none;
-      @media (forced-colors: active) {
-        outline: 2px solid transparent;
-        outline-offset: 2px;
-      }
-    }
-    &:focus-visible {
-      outline: 2px solid currentColor;
-      outline-offset: 2px;
-    }
-  }
   .cursor-pointer {
     cursor: pointer;
   }
@@ -2191,9 +2257,6 @@
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-  .grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -2373,6 +2436,9 @@
   .px-1 {
     padding-inline: calc(var(--spacing) * 1);
   }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
   }
@@ -2390,6 +2456,9 @@
   }
   .py-16 {
     padding-block: calc(var(--spacing) * 16);
+  }
+  .pt-24 {
+    padding-top: calc(var(--spacing) * 24);
   }
   .text-center {
     text-align: center;
@@ -2551,16 +2620,6 @@
       }
     }
   }
-  .group-hover\:scale-110 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        --tw-scale-x: 110%;
-        --tw-scale-y: 110%;
-        --tw-scale-z: 110%;
-        scale: var(--tw-scale-x) var(--tw-scale-y);
-      }
-    }
-  }
   .hover\:scale-105 {
     &:hover {
       @media (hover: hover) {
@@ -2569,6 +2628,16 @@
         --tw-scale-z: 105%;
         scale: var(--tw-scale-x) var(--tw-scale-y);
       }
+    }
+  }
+  .sm\:ml-12 {
+    @media (width >= 40rem) {
+      margin-left: calc(var(--spacing) * 12);
+    }
+  }
+  .sm\:ml-16 {
+    @media (width >= 40rem) {
+      margin-left: calc(var(--spacing) * 16);
     }
   }
   .sm\:flex {
@@ -2621,19 +2690,19 @@
       }
     }
   }
-  .sm\:grid-cols-3 {
+  .sm\:justify-start {
     @media (width >= 40rem) {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      justify-content: flex-start;
     }
   }
-  .sm\:flex-row {
+  .sm\:px-12 {
     @media (width >= 40rem) {
-      flex-direction: row;
+      padding-inline: calc(var(--spacing) * 12);
     }
   }
-  .sm\:justify-center {
+  .sm\:px-16 {
     @media (width >= 40rem) {
-      justify-content: center;
+      padding-inline: calc(var(--spacing) * 16);
     }
   }
   .sm\:px-18 {
@@ -2641,9 +2710,9 @@
       padding-inline: calc(var(--spacing) * 18);
     }
   }
-  .md\:mx-32 {
-    @media (width >= 48rem) {
-      margin-inline: calc(var(--spacing) * 32);
+  .sm\:pt-64 {
+    @media (width >= 40rem) {
+      padding-top: calc(var(--spacing) * 64);
     }
   }
   .md\:w-35 {
@@ -2659,11 +2728,6 @@
   .md\:grid-cols-2 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-  .md\:grid-cols-4 {
-    @media (width >= 48rem) {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
   .md\:flex-row {
