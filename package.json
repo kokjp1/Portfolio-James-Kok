@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/kokjp1/Portfolio-James-Kok#readme",
   "devDependencies": {
+    "@types/list.js": "^2.3.4",
     "concurrently": "^9.1.2",
     "daisyui": "^5.0.18",
     "tailwindcss": "^4.1.3",
@@ -24,6 +25,7 @@
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.3",
-    "aos": "^2.3.4"
+    "aos": "^2.3.4",
+    "list.js": "^2.3.1"
   }
 }

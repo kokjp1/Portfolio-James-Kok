@@ -14,5 +14,4 @@ https://codingstella.com/glowy-cards-hover-effect-in-html-css-javascript/
 
 to-do: 
 
-* fix image size (PC pictures, test later to see if necessary, very slow atm)
-* (on mobile, add a small explanation for diff element because its not a slider but clicking the pictures)
+* zorgen dat je kaarten met meerdere tags (UI, CODE), kan filteren op beide ipv alleen de eerste tag
