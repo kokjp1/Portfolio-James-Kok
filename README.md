@@ -14,4 +14,6 @@ https://codingstella.com/glowy-cards-hover-effect-in-html-css-javascript/
 
 to-do: 
 
-* zorgen dat je kaarten met meerdere tags (UI, CODE), kan filteren op beide ipv alleen de eerste tag
+* alles in het engels zetten
+* fotos van projecten netjes maken
+* back to top button maken onder de kaarten van projecten
