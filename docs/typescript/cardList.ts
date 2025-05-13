@@ -2,8 +2,6 @@
 
 // list.js & AOS do not work together :/
 
-declare const List: any;
-
 function fadeInVisibleItems(): void {
   const items = Array.from(document.querySelectorAll<HTMLElement>('.list article'));
 

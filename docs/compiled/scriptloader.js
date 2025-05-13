@@ -6,6 +6,6 @@ function loadScript(src) {
     document.body.appendChild(script);
 }
 if (window.innerWidth >= 1024) {
-    loadScript('compiled/backgroundsphere.js');
-    loadScript('compiled/tilehover.js');
+    loadScript('/compiled/backgroundsphere.js');
+    loadScript('/compiled/tilehover.js');
 }

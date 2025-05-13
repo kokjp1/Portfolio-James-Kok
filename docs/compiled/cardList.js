@@ -1,5 +1,6 @@
 "use strict";
 // cardList.ts
+// list.js & AOS do not work together :/
 function fadeInVisibleItems() {
     const items = Array.from(document.querySelectorAll('.list article'));
     items.forEach((item, index) => {

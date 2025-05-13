@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html data-theme="dracula" lang="en" class="preloading">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Projects | Whack-a-Mole</title>
+      <link rel="stylesheet" href="/styling/tailwindOutput.css" />
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+   </head>
+
+   <body class="overflow-x-hidden font-inter">
+      <!-- ----------------------------------------------------------------------- -->
+      <!--                            background effect                            -->
+      <!-- ----------------------------------------------------------------------- -->
+
+      <canvas id="bg-canvas" class="fixed inset-0 z-[-10] pointer-events-none"></canvas>
+      <svg id="background-sphere" class="fixed rounded-full pointer-events-none z-[-10] hidden lg:block text-primary/20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 595.28">
+         <defs>
+            <style>
+               .cls-1 {
+                  fill: url(#radial-gradient);
+               }
+            </style>
+            <radialGradient id="radial-gradient" cx="297.64" cy="297.64" fx="297.64" fy="297.64" r="297.64" gradientUnits="userSpaceOnUse">
+               <stop offset="0" stop-color="currentColor" stop-opacity=".5" />
+               <stop offset=".46" stop-color="currentColor" stop-opacity=".24" />
+               <stop offset=".82" stop-color="currentColor" stop-opacity=".07" />
+               <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+            </radialGradient>
+         </defs>
+         <g id="Layer_1-2" data-name="Layer_1">
+            <rect class="cls-1" width="1595.28" height="1595.28" />
+         </g>
+      </svg>
+
+      <!-- ----------------------------------------------------------------------- -->
+      <!--                                   nav                                   -->
+      <!-- ----------------------------------------------------------------------- -->
+
+      <div class="container mx-auto px-18 sticky top-8 z-100">
+         <div class="navbar bg-base-300 shadow-sm mx-auto rounded-xl border-2 border-base-200 w-full mt-0">
+            <div class="navbar-start">
+               <div class="dropdown">
+                  <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                     </svg>
+                  </div>
+                  <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-300 rounded-box z-1 mt-5 w-52 p-4 shadow text-3xl gap-2">
+                     <li><a href="/index.html" class="text-xl">James Kok</a></li>
+                     <li><a href="/aboutme.html" class="text-xl">About me</a></li>
+                     <li><a href="/projects.html" class="text-xl">Projects</a></li>
+                  </ul>
+               </div>
+               <a href="/index.html" class="hidden sm:flex btn btn-ghost text-xl">James Kok</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+               <ul class="menu menu-horizontal px-1">
+                  <li><a href="/aboutme.html">About me</a></li>
+                  <li><a href="/projects.html">Projects</a></li>
+               </ul>
+            </div>
+            <div class="navbar-end">
+               <div class="dropdown">
+                  <div tabindex="0" role="button" class="btn m-1">
+                     Theme 🎨
+                     <svg width="12px" height="12px" class="inline-block h-2 w-2 fill-current opacity-60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
+                        <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+                     </svg>
+                  </div>
+                  <ul tabindex="0" class="dropdown-content bg-base-300 rounded-box z-1 w-52 p-2 shadow-2xl mt-4 overflow-y-scroll overflow-x-hidden max-h-[50vh]">
+                     <!-- Themes -->
+                     <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" data-theme="Light" aria-label="Light" value="light" /></li>
+                     <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Dark" value="dark" /></li>
+                     <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Bumblebee" value="bumblebee" /></li>
+                     <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Emerald" value="emerald" /></li>
+                     <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Synthwave" value="synthwave" /></li>
+                     <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Valentine" value="valentine" /></li>
+                     <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Halloween" value="halloween" /></li>
+                     <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Forest" value="forest" /></li>
+                     <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Lofi" value="lofi" /></li>
+                     <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Dracula" value="dracula" /></li>
+                     <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Night" value="night" /></li>
+                     <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Coffee" value="coffee" /></li>
+                     <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Winter" value="winter" /></li>
+                     <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Dim" value="dim" /></li>
+                     <li><input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-ghost justify-start" aria-label="Silk" value="silk" /></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <main class="space-y-64">
+
+      <!-- ----------------------------------------------------------------------- -->
+      <!--                                Carousel                                 -->
+      <!-- ----------------------------------------------------------------------- -->
+      <div class="container mx-auto flex justify-center px-18 my-36 relative">
+         <div class="carousel md:w-1/2 rounded-xl shadow-sm border-2 border-base-200">
+            <div id="slide1" class="carousel-item relative w-full">
+               <img
+                  src="assets/boekenzoeker_home.jpg"
+                  class="w-full" />
+               <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                  <a href="#slide4" class="btn btn-circle opacity-0 sm:opacity-100">❮</a>
+                  <a href="#slide2" class="btn btn-circle opacity-0 sm:opacity-100">❯</a>
+               </div>
+            </div>
+            <div id="slide2" class="carousel-item relative w-full">
+               <img
+                  src="assets/boekenzoeker_form.png"
+                  class="w-full" />
+               <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                  <a href="#slide1" class="btn btn-circle opacity-0 sm:opacity-100">❮</a>
+                  <a href="#slide3" class="btn btn-circle opacity-0 sm:opacity-100">❯</a>
+               </div>
+            </div>
+            <div id="slide3" class="carousel-item relative w-full">
+               <img
+                  src="assets/boekenzoeker_wishlist.png"
+                  class="w-full" />
+               <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                  <a href="#slide2" class="btn btn-circle opacity-0 sm:opacity-100">❮</a>
+                  <a href="#slide4" class="btn btn-circle opacity-0 sm:opacity-100">❯</a>
+               </div>
+            </div>
+            <div id="slide4" class="carousel-item relative w-full">
+               <img
+                  src="assets/boekenzoeker_error.png"
+                  class="w-full"  />
+               <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                  <a href="#slide3" class="btn btn-circle opacity-0 sm:opacity-100">❮</a>
+                  <a href="#slide1" class="btn btn-circle opacity-0 sm:opacity-100">❯</a>
+               </div>
+            </div>
+         </div>
+         <div class="carousel-pagination absolute bottom-1 sm:bottom-8 py-2">
+         <a href="#slide1" class="btn btn-xs cursor-pointer">1</a>
+         <a href="#slide2" class="btn btn-xs cursor-pointer">2</a>
+         <a href="#slide3" class="btn btn-xs cursor-pointer">3</a>
+         <a href="#slide4" class="btn btn-xs cursor-pointer">4</a>
+         </div>
+      </div>
+      <!-- ----------------------------------------------------------------------- -->
+      <!--                            script(s) imports                            -->
+      <!-- ----------------------------------------------------------------------- -->
+
+      <script src="/compiled/pageLoader.js"></script>
+      <script src="/compiled/carousel.js"></script>
+      <script src="/compiled/themeSelector.js"></script>
+      <script src="/compiled/scriptLoader.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+         AOS.init();
+      </script>
+   </body>
+</html>
